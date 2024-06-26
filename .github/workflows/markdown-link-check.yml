@@ -1,18 +1,13 @@
-name: Check Markdown Links
-
-on:
-  pull_request:
-
-permissions:
-  contents: read
-
+name: Linkspector
+on: [pull_request]
 jobs:
   check-links:
-    name: Check links
+    name: runner / linkspector
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-    - uses: actions/checkout@main
-    - uses: gaurav-nelson/github-action-markdown-link-check@v1
-      with:
-        base-branch: 'main'
+      - uses: actions/checkout@v4
+      - name: Run linkspector
+        uses: umbrelladocs/action-linkspector@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
