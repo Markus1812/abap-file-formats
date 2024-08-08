@@ -9,6 +9,7 @@ For its annotation and validation, the ABAP file formats provide JSON Schemas.
 * [Example](#example)
 * [Reusable Fields in JSON Files](#reusable-fields-in-json-files)
 * [Broken Link](#broken-link)
+* [Another Broken Link](#broken-link)
 
 ## Format Versions and Compatibility
 
